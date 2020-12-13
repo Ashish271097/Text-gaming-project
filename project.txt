@@ -1,0 +1,30 @@
+while(i<=19){
+			y=0;
+        	try{
+        		l.setText(method2(i));
+        		k.setText("YOUR SCORE IS : "+score+"/"+i);
+    		k.setFont(new Font("Serif", Font.BOLD, 25));
+    		k.setBounds(550,450,300,50);
+    		f.add(k);
+    		}
+        	catch(Exception t){
+        		f.dispose();
+        		f.setVisible(false);	
+        		k.setText("YOUR SCORE IS : "+score+"/"+(i-1));
+		    k.setFont(new Font("Serif", Font.BOLD, 25));
+			k.setBounds(550, 100, 300,50);
+			bk.setBounds(550,200,100,50);
+			b.setBounds(700,200,100,50);
+			bk.setFont(new Font("Serif", Font.BOLD, 15));
+			b.setFont(new Font("Serif", Font.BOLD, 15));
+            f2.setLayout(null);
+			f2.setSize(3000, 3000);
+			f2.setVisible(true);
+			f2.add(k);
+			f2.add(b);
+			f2.add(bk);
+			f2.addWindowListener(new WindowAdapter() {
+	        	public void windowClosing(WindowEvent e) {
+	        		System.exit(0);
+	        	}
+			});
